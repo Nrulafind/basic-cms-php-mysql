@@ -54,12 +54,12 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //route untuk authorization and authentication 
-$route['login'] = ['AuthController/index'];
-$route['register'] = ['AuthController/register'];
-$route['logout'] = ['AuthController/logout'];
+$route['login'] = 'AuthController/index';
+$route['register'] = 'AuthController/register';
+$route['logout'] = 'AuthController/logout';
 
 //route untuk user 
-$route['user'] = ['UserController'];
+$route['user'] = 'UserController';
 
 
 //route untuk admin

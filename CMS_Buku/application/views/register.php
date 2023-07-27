@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container" style="height: 100vh;">
+	<div class="d-flex align-items-center" style="height:100%;">
+		<div class="d-flex justify-content-center" style="width:100%;">
+			<div class="d-flex flex-column gap-5">
+				<div class="d-flex justify-content-center">
+					<h1>Halaman Register</h1>
+				</div>
+				<div class="d-flex justify-content-center">
+					<div class="d-flex flex-column">
+						<div class="card p-5">
+							<form method="post" action="<?= base_url('AuthController/register_add') ?>">
+								<div class="d-flex flex-column gap-3">
+									<label for="user_name">Username :</label>
+									<input type="text" name="user_name">
+								</div>
+								<div class="d-flex flex-column gap-3 mt-2">
+									<label for="password"> Password :</label>
+									<input type="password" name="user_password">
+								</div>
+								<button class="btn btn-primary text-light mt-4" type="submit">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	body {
+		background-color: #8696FE !important;
+	}
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CMS register</title>
-</head>
+	.card {
+		background-color: #ECF8F9 !important;
+		border-radius: 20px !important;
+		width: 40em !important;
+	}
 
-<body>
-	<form method="post" action="<?= base_url('AuthController/register_add') ?>">
-
-		<p>Username : <br>
-			<input type="text" name="user_name">
-		</p>
-		<p>Password : <br>
-			<input type="password" name="user_password">
-		</p>
-		<p><button type="submit">Submit</button></p>
-	</form>
-</body>
-
-</html>
+	input {
+		padding: 5px 5px;
+		border: 1px solid black;
+		background: none;
+		border-radius: 15px;
+	}
+</style>
